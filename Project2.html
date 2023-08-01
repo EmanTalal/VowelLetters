@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<htmal lang="en">
+    <head>
+        <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewPort" content="width=device-width , initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+        <body>
+            <div style="text-align: center; font-size: 30px" >
+                Vowel Letters:(A,E,I,O,U)
+                <br>
+            <input id="string-input" type="text" >
+            <button id="submit">submit</button>
+            <h2 id ="result"></h2>
+        </div>
+        </body>
+        <script>
+            document.getElementById("submit").addEventListener("click", function(){
+                document.getElementById("result").innerHTML =''
+
+                var text=document.getElementById("string-input").value
+
+                for(var char of text){
+                    const vowels=["a" , "e" , "i","o","u"];
+                    var lowerCher=char.toLowerCase()
+                    if(!vowels.includes(lowerCher)){
+                        document.getElementById("result").innerHTML +=char +'<br>'
+
+                    }
+                }
+            })
+        </script>
+</htmal>
